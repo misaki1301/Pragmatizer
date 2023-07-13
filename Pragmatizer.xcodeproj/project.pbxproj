@@ -16,6 +16,7 @@
 		ADACB1EE2A5F33F4009B02D4 /* PragmatizerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACB1ED2A5F33F4009B02D4 /* PragmatizerUITestsLaunchTests.swift */; };
 		ADACB1FC2A5F3565009B02D4 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = ADACB1FB2A5F3565009B02D4 /* AudioKit */; };
 		ADACB1FF2A5F3FCF009B02D4 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = ADACB1FE2A5F3FCF009B02D4 /* SoundpipeAudioKit */; };
+		ADACB2022A603D95009B02D4 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = ADACB2012A603D95009B02D4 /* Keyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADACB2022A603D95009B02D4 /* Keyboard in Frameworks */,
 				ADACB1FF2A5F3FCF009B02D4 /* SoundpipeAudioKit in Frameworks */,
 				ADACB1FC2A5F3565009B02D4 /* AudioKit in Frameworks */,
 			);
@@ -150,6 +152,7 @@
 			packageProductDependencies = (
 				ADACB1FB2A5F3565009B02D4 /* AudioKit */,
 				ADACB1FE2A5F3FCF009B02D4 /* SoundpipeAudioKit */,
+				ADACB2012A603D95009B02D4 /* Keyboard */,
 			);
 			productName = Pragmatizer;
 			productReference = ADACB1CD2A5F33F1009B02D4 /* Pragmatizer.app */;
@@ -226,6 +229,7 @@
 			packageReferences = (
 				ADACB1FA2A5F3565009B02D4 /* XCRemoteSwiftPackageReference "AudioKit" */,
 				ADACB1FD2A5F3FCF009B02D4 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+				ADACB2002A603D94009B02D4 /* XCRemoteSwiftPackageReference "Keyboard" */,
 			);
 			productRefGroup = ADACB1CE2A5F33F1009B02D4 /* Products */;
 			projectDirPath = "";
@@ -611,6 +615,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		ADACB2002A603D94009B02D4 /* XCRemoteSwiftPackageReference "Keyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Keyboard/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -623,6 +635,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ADACB1FD2A5F3FCF009B02D4 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
 			productName = SoundpipeAudioKit;
+		};
+		ADACB2012A603D95009B02D4 /* Keyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADACB2002A603D94009B02D4 /* XCRemoteSwiftPackageReference "Keyboard" */;
+			productName = Keyboard;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

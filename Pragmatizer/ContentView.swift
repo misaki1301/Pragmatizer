@@ -8,6 +8,8 @@
 import SwiftUI
 import AudioKit
 import SoundpipeAudioKit
+import Keyboard
+
 struct ContentView: View {
 	
 	let engine = AudioEngine()
@@ -65,6 +67,7 @@ struct ContentView: View {
 				Text("Play OSC")
 			}
 				.buttonStyle(.borderedProminent)
+			Keyboard()
         }
         .padding()
     }
