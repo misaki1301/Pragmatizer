@@ -17,6 +17,10 @@
 		ADACB1FC2A5F3565009B02D4 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = ADACB1FB2A5F3565009B02D4 /* AudioKit */; };
 		ADACB1FF2A5F3FCF009B02D4 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = ADACB1FE2A5F3FCF009B02D4 /* SoundpipeAudioKit */; };
 		ADACB2022A603D95009B02D4 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = ADACB2012A603D95009B02D4 /* Keyboard */; };
+		F5D98CAB2A85D7DE0037607A /* Controls in Frameworks */ = {isa = PBXBuildFile; productRef = F5D98CAA2A85D7DE0037607A /* Controls */; };
+		F5D98CAE2A85D89F0037607A /* SynthClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D98CAD2A85D89F0037607A /* SynthClass.swift */; };
+		F5D98CB12A85DD3F0037607A /* MorphingOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D98CB02A85DD3F0037607A /* MorphingOscillator.swift */; };
+		F5D98CB42A85E27F0037607A /* PragmaWaveKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D98CB32A85E27F0037607A /* PragmaWaveKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,9 @@
 		ADACB1E72A5F33F4009B02D4 /* PragmatizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmatizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADACB1EB2A5F33F4009B02D4 /* PragmatizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmatizerUITests.swift; sourceTree = "<group>"; };
 		ADACB1ED2A5F33F4009B02D4 /* PragmatizerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmatizerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F5D98CAD2A85D89F0037607A /* SynthClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthClass.swift; sourceTree = "<group>"; };
+		F5D98CB02A85DD3F0037607A /* MorphingOscillator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphingOscillator.swift; sourceTree = "<group>"; };
+		F5D98CB32A85E27F0037607A /* PragmaWaveKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaWaveKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D98CAB2A85D7DE0037607A /* Controls in Frameworks */,
 				ADACB2022A603D95009B02D4 /* Keyboard in Frameworks */,
 				ADACB1FF2A5F3FCF009B02D4 /* SoundpipeAudioKit in Frameworks */,
 				ADACB1FC2A5F3565009B02D4 /* AudioKit in Frameworks */,
@@ -100,8 +108,10 @@
 		ADACB1CF2A5F33F1009B02D4 /* Pragmatizer */ = {
 			isa = PBXGroup;
 			children = (
+				F5D98CAF2A85DCF30037607A /* Model */,
+				F5D98CAC2A85D8800037607A /* ViewModel */,
+				F5D98CB22A85E2530037607A /* View */,
 				ADACB1D02A5F33F1009B02D4 /* PragmatizerApp.swift */,
-				ADACB1D22A5F33F1009B02D4 /* ContentView.swift */,
 				ADACB1D42A5F33F4009B02D4 /* Assets.xcassets */,
 				ADACB1D62A5F33F4009B02D4 /* Preview Content */,
 			);
@@ -133,6 +143,31 @@
 			path = PragmatizerUITests;
 			sourceTree = "<group>";
 		};
+		F5D98CAC2A85D8800037607A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F5D98CAD2A85D89F0037607A /* SynthClass.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F5D98CAF2A85DCF30037607A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5D98CB02A85DD3F0037607A /* MorphingOscillator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5D98CB22A85E2530037607A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADACB1D22A5F33F1009B02D4 /* ContentView.swift */,
+				F5D98CB32A85E27F0037607A /* PragmaWaveKeyboard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +188,7 @@
 				ADACB1FB2A5F3565009B02D4 /* AudioKit */,
 				ADACB1FE2A5F3FCF009B02D4 /* SoundpipeAudioKit */,
 				ADACB2012A603D95009B02D4 /* Keyboard */,
+				F5D98CAA2A85D7DE0037607A /* Controls */,
 			);
 			productName = Pragmatizer;
 			productReference = ADACB1CD2A5F33F1009B02D4 /* Pragmatizer.app */;
@@ -230,6 +266,7 @@
 				ADACB1FA2A5F3565009B02D4 /* XCRemoteSwiftPackageReference "AudioKit" */,
 				ADACB1FD2A5F3FCF009B02D4 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
 				ADACB2002A603D94009B02D4 /* XCRemoteSwiftPackageReference "Keyboard" */,
+				F5D98CA92A85D7DE0037607A /* XCRemoteSwiftPackageReference "Controls" */,
 			);
 			productRefGroup = ADACB1CE2A5F33F1009B02D4 /* Products */;
 			projectDirPath = "";
@@ -273,8 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D98CAE2A85D89F0037607A /* SynthClass.swift in Sources */,
 				ADACB1D32A5F33F1009B02D4 /* ContentView.swift in Sources */,
+				F5D98CB42A85E27F0037607A /* PragmaWaveKeyboard.swift in Sources */,
 				ADACB1D12A5F33F1009B02D4 /* PragmatizerApp.swift in Sources */,
+				F5D98CB12A85DD3F0037607A /* MorphingOscillator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +663,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		F5D98CA92A85D7DE0037607A /* XCRemoteSwiftPackageReference "Controls" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Controls";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -640,6 +688,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ADACB2002A603D94009B02D4 /* XCRemoteSwiftPackageReference "Keyboard" */;
 			productName = Keyboard;
+		};
+		F5D98CAA2A85D7DE0037607A /* Controls */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5D98CA92A85D7DE0037607A /* XCRemoteSwiftPackageReference "Controls" */;
+			productName = Controls;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
